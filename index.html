@@ -1,0 +1,50 @@
+<html>
+
+<head>
+  <title>Reconocimiento de emojis</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+  <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+<link rel="shortcut icon" href="icons8-robot-100.png" type="image/x-icon">
+</head>
+
+<body>
+  <div class="container">
+
+    <center>
+      <h3 class="btn btn-default heading">Reconocimiento de emojis <br>🤨 🫣 👍 😎</h3>
+      <br><br>
+
+      <p style="font-size: 22px;">Tomate una foto y descubre tu emoji: </p>
+      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-11">
+        <label>Vista de la cámara: </label>
+        <div id="Camara"></div>
+        <br><br>
+        <button class="btn btn-info" onclick="tomar_foto()">Tomar foto</button>
+      </div>
+    
+     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-11">
+      <div id="captura"></div>
+      <br><br>
+      <button class="btn btn-success" onclick="reconocer_objeto()">Reconocer objeto</button>
+     </div>
+     
+      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-11">
+        <p style="font-size: 22px;" id="Emoji-1">Emoji 1: </p> 
+        <p style="font-size: 22px;" id="Emoji-2">Emoji 2: </p>
+      </div>
+
+    </center>
+
+  </div>
+  <script src="main.js"></script>
+
+</body>
+
+</html>
